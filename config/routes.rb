@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
+  root :to => 'index#index'
+  
   devise_for :sellers
   devise_for :customers
-	root :to => 'index#index'
+
+  resources :about
 end
