@@ -5,7 +5,7 @@ class Credits < ActiveRecord::Migration[5.1]
   		t.column :telephone, :bigint
   		t.column :price, :bigint
   		t.column :credit_amount, :bigint
-  		t.column :seller_id, :integer
+  		t.column :user_id, :integer
 
   		t.timestamps
   	end

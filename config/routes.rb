@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   end
 
   resources :customers
+  resources :sellers
   resources :about
   resources :trades
 end
