@@ -1,8 +1,6 @@
 <!-- Add Google Maps -->
 <div id="map"></div>
     <style>
-      /* Always set the map height explicitly to define the size of the div
-       * element that contains the map. */
       #map {
         height: 50%;
       }
@@ -29,7 +27,7 @@
               lng: position.coords.longitude
             };
             infoWindow.setPosition(pos);
-            infoWindow.setContent('Location found.');
+            infoWindow.setContent('Current Location Found.');
             infoWindow.open(map);
             map.setCenter(pos);
           }, function() {
@@ -52,6 +50,8 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLBgOjVbd4YlVVbk75rpYR4F_fFtljVO0&callback=initMap">
     </script>
 <!-- Add Google Maps -->
+
+
 
 <% content_for(:title, "Credits") %>
 
