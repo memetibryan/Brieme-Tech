@@ -1,44 +1,45 @@
 class CreditsController < ApplicationController
+	before_action :authenticate_user!
 	
 	def new
-		@seller = User.find(params[:user_id,])
-		@credit = @seller.credits.new
+		@user = User.find(params[:seller_id])
+		@credit = @user.credits.new
 	end
 
 	def create
-		@seller = User.find(params[:user_id])
-		@credit = @seller.credits.new(credit_params)
+		@user = User.find(params[:user_id])
+		@credit = @user.credits.new(credit_params)
 		if @credit.save
-			redirect_to seller_path(@seller)
+			redirect_to seller_path(@user)
 		else
 			render :new
 		end
 	end
 
 	def edit
-		@seller = User.find(params[:user_id])
+		@user = User.find(params[:user_id])
 		@credit = Credit.find(params[:id])
 	end
 
 	def update
-		@seller = User.find(params[:user_id])
+		@user = User.find(params[:user_id])
 		@credit = Credit.find(params[:id])
 		if @credit.update(credit_params)
-			redirect_to seller_path(@seller)
+			redirect_to seller_path(@user)
 		else
 			render :new
 		end
 	end
 
 	def destroy
-		@seller = User.find(params[:user_id])
+		@user = User.find(params[:user_id])
 		@credit = Credit.find(params[:id])
 		@credit.destroy
-		redirect_to seller_path(@seller)
+		redirect_to seller_path(@user)
 	end
 
 private
 	def credit_params
-		params.require(:credit).permit(:name,:telephone, :price, :credit_amount)
+		params.require(:credit).permit(:name, :telephone, :price, :credit_amount)
 	end
 end

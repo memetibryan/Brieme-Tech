@@ -3,10 +3,17 @@ Rails.application.routes.draw do
   	resources :credits
   end
 
+  resources :users do
+    resources :credits
+  end
+
+  resources :sellers do
+  	resources :credits
+  end
+
   root :to => 'index#index'
 
   resources :customers
-  resources :sellers
   resources :about
   resources :trades
 end
