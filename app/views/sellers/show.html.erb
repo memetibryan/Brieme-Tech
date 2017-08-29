@@ -3,19 +3,16 @@
 <div class="container-fluid">
 
 <% if @seller.credits.any? %>
-    <h4>Here are the credits for <%= @seller.email %>:</h4>
+    <h4>Credits in Stock:</h4>
 
     <hr>
 
     <ul>
       <% @seller.credits.each do |credit| %>
         <ol>
-          <p><%= credit.credit_amount %> <p><%= credit.price %></p>
-          <p><%= link_to "Edit", edit_seller_credit_path(@seller, credit), class: 'btn btn-primary' %> |
-          <%= link_to "Delete", seller_credit_path(@seller, credit),
-                                   :data => {:confirm => "Are you sure?",
-                                                  :method => "delete"}, class: 'btn btn-primary' %></p>
-                                                  <hr>
+          <p>Credit:<%= credit.credit_amount %> <p>Selling at:<%= credit.price %></p>
+          <%= link_to "Purchase", seller_credit_path(@seller, credit),
+                                   :data => {:confirm => "Are you sure?"}, class: 'btn btn-primary' %></p><hr>
         </ol>
       <% end %>
     </ul>
