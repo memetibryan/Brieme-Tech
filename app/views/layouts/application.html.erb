@@ -96,11 +96,8 @@ body, html {
     <a href="/about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="https://bryan-memeti.herokuapp.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
 
-    <%= link_to 'Sign Out Seller', destroy_seller_session_path, method: :delete, class: "w3-bar-item w3-button w3-hide-small" %>
-    <%= link_to 'Sign Out Customer', destroy_customer_session_path, method: :delete, class: "w3-bar-item w3-button w3-hide-small" %>
-    <a href="/sellers/sign_in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>Sign In as Seller</a>
-    <a href="/customers/sign_in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>Sign In as Customer</a>
-
+    <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "w3-bar-item w3-button w3-hide-small" %>
+    <a href="/users/sign_in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>Sign In as Seller</a>
 
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
     <i class="fa fa-search"></i>

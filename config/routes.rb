@@ -1,11 +1,9 @@
 Rails.application.routes.draw do
-  devise_for :users
-
-  root :to => 'index#index'
-
-  resources :users do
+  devise_for :users do
   	resources :credits
   end
+
+  root :to => 'index#index'
 
   resources :customers
   resources :sellers
