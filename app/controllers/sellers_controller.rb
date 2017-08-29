@@ -5,7 +5,6 @@ class SellersController < ApplicationController
 
 	def show
 		@seller = User.find(params[:id])
-		@current_user = current_user
-		@logged_user = @seller
+		@logged_user = current_user
 	end
 end
