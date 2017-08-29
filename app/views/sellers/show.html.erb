@@ -1,0 +1,30 @@
+<% content_for(:title, "Credits") %>
+
+<div class="container-fluid">
+
+<% if @seller.credits.any? %>
+    <h4>Here are the credits for <%= @seller.email %>:</h4>
+
+    <hr>
+
+    <ul>
+      <% @seller.credits.each do |credit| %>
+        <ol>
+          <p><%= credit.credit_amount %> <p><%= credit.price %></p>
+          <p><%= link_to "Edit", edit_seller_credit_path(@seller, credit), class: 'btn btn-primary' %> |
+          <%= link_to "Delete", seller_credit_path(@seller, credit),
+                                   :data => {:confirm => "Are you sure?",
+                                                  :method => "delete"}, class: 'btn btn-primary' %></p>
+                                                  <hr>
+        </ol>
+      <% end %>
+    </ul>
+
+  <% else %>
+    <p><%= @seller.email %> has no credits yet!</p>
+  <% end %>
+
+<%= link_to "Stock", new_seller_credit_path(@seller),id: "new_link",class: 'btn btn-default' %>
+</div>
+
+<hr>

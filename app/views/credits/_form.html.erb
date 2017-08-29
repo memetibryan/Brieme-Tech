@@ -1,0 +1,18 @@
+<%= render "layouts/errors", :object => @credit %>
+
+<div class="container-fluid">
+
+<%= form_for [@seller, @credit] do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+    <%= f.label :telephone %>
+    <%= f.text_field :telephone %>
+    <%= f.label :selling_price %>
+    <%= f.file_field :price %>
+    <%= f.label :amount_of_credit %>
+    <%= f.file_field :credit_amount %>
+
+    <p><%= f.submit %></p>
+  <% end %>
+
+</div>

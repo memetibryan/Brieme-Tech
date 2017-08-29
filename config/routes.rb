@@ -4,6 +4,10 @@ Rails.application.routes.draw do
   devise_for :sellers
   devise_for :customers
 
+  resources :sellers do
+  	resources :credits
+  end
+
   resources :about
   resources :trades
 end
