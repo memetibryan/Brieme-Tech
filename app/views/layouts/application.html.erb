@@ -96,8 +96,12 @@ body, html {
     <a href="/about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
     <a href="https://bryan-memeti.herokuapp.com" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
 
+    <% if current_user %>
     <%= link_to 'Sign Out', destroy_user_session_path, method: :delete, class: "w3-bar-item w3-button w3-hide-small" %>
+
+    <% else %>
     <a href="/users/sign_in" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i>Sign In as Seller</a>
+    <% end %>
 
     <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
     <i class="fa fa-search"></i>
