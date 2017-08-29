@@ -1,3 +1,5 @@
+<% if @current_user === @logged_user %>
+
 <!-- Add Google Maps -->
 <div id="map"></div>
     <style>
@@ -50,6 +52,12 @@
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBLBgOjVbd4YlVVbk75rpYR4F_fFtljVO0&callback=initMap">
     </script>
 <!-- Add Google Maps -->
+
+<% else %>
+  <p>Not Available Now!!</p>
+  <br>
+  <hr>
+<% end %>
 
 
 
