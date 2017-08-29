@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   devise_for :customers
 
   resources :about
+  resources :trades
 end
