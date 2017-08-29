@@ -11,8 +11,9 @@
       <% @seller.credits.each do |credit| %>
         <ol>
           <p>Credit:<%= credit.credit_amount %> <p>Selling at:<%= credit.price %></p>
-          <%= link_to "Purchase", seller_credit_path(@seller, credit),
-                                   :data => {:confirm => "Are you sure?"}, class: 'btn btn-primary' %></p><hr>
+
+          <p class="w3-xlarge">
+          <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Purchase</button></p><hr>
         </ol>
       <% end %>
     </ul>
@@ -25,3 +26,18 @@
 </div>
 
 <hr>
+
+<!-- RSVP modal -->
+<div id="id01" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <p class="w3-wide"><%= @seller.email %></p>
+      <p>Email to purchase</p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <a href="#" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-blue">Cancel Transaction</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
