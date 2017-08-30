@@ -1,18 +1,38 @@
-/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
- * vendor/assets/stylesheets directory can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the bottom of the
- * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
- * files in this directory. Styles in this file should be added after the last require_* statement.
- * It is generally better to create a new file per style scope.
- *
- *= require_tree .
- *= require_self
- */
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+@import url('https://fonts.googleapis.com/css?family=Dosis|Jaldi|Ubuntu|Baloo+Bhaina|Courgette|Great+Vibes|Montserrat|Patua+One|Raleway');
+
+/*font-family: 'Montserrat', sans-serif;
+font-family: 'Raleway', sans-serif;
+font-family: 'Patua One', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Baloo Bhaina', cursive;
+font-family: 'Great Vibes', cursive;
+font-family: 'Dosis', sans-serif;
+font-family: 'Jaldi', sans-serif; 
+font-family: 'Ubuntu', sans-serif;*/
+
+body {
+  overflow-x: hidden;
+  color: black;
+  font-size: 15px;
+  font-family: 'Raleway', sans-serif;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.message{
+	padding: 120px;
+	background-image: url(https://cdn.pixabay.com/photo/2017/08/07/22/57/coffee-2608864_960_720.jpg);
+}
+
+.success{
+	color: green;
+	font-size: 60px;
+	text-align: center;
+	padding: 120px;
+	background-image: url(https://cdn.pixabay.com/photo/2015/02/02/11/09/office-620822_960_720.jpg);
+}
