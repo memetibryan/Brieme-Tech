@@ -16,4 +16,5 @@ Rails.application.routes.draw do
   resources :customers
   resources :about
   resources :trades
+  resources :messages
 end

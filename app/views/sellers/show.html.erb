@@ -60,6 +60,9 @@
   <hr>
 <% end %>
 
+<p class="w3-xlarge">
+<button onclick="document.getElementById('id02').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Send Message</button></p>
+<hr>
 
 
 <% content_for(:title, "Credits") %>
@@ -78,6 +81,8 @@
 
           <p class="w3-xlarge">
           <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Purchase</button></p><hr>
+          </p>
+        </div>
         </ol>
       <% end %>
     </ul>
@@ -100,6 +105,26 @@
       <div class="w3-row">
         <div class="w3-half">
           <a href="#" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-blue">Cancel Transaction</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- RSVP modal -->
+<div id="id02" class="w3-modal">
+  <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
+    <div class="w3-container w3-white w3-center">
+      <h1 class="w3-wide">You want to Transact?</h1>
+      <p>I really hope this platfoam suites you!</p>
+        <%= render "message" %>
+      <p><i>Sincerely, Bryan Memeti</i></p>
+      <div class="w3-row">
+        <div class="w3-half">
+          <button onclick="document.getElementById('id02').style.display='none'" type="button" class="w3-button w3-block w3-red">Send</button>
+        </div>
+        <div class="w3-half">
+          <a href="#" onclick="document.getElementById('id02').style.display='none'" type="button" class="w3-button w3-block w3-blue">Cancel</a>
         </div>
       </div>
     </div>
