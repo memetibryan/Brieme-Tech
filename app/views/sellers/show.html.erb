@@ -102,8 +102,17 @@
 <div id="id01" class="w3-modal">
   <div class="w3-modal-content w3-card-4 w3-animate-zoom" style="padding:32px;max-width:600px">
     <div class="w3-container w3-white w3-center">
-      <p class="w3-wide"><%= @seller.email %></p>
-      <p>Email to purchase</p>
+      <p class="w3-wide">Payment to <%= @seller.email %></p>
+      <p>Pay with</p>
+      <div class="w3-row">
+        <i class="fa fa-cc-visa" style="font-size:48px;color:red"></i>
+        <i class="fa fa-paypal" style="font-size:48px;color:red"></i>
+        <i class="fa fa-cc-paypal" style="font-size:48px;color:red"></i>
+        <i class="fa fa-google-wallet" style="font-size:48px;color:red"></i>
+        <i class="fa fa-cc-mastercard" style="font-size:48px;color:red"></i>
+        <i class="fa fa-cc-stripe" style="font-size:48px;color:red"></i>
+      </div>
+
       <div class="w3-row">
         <div class="w3-half">
           <a href="#" onclick="document.getElementById('id01').style.display='none'" type="button" class="w3-button w3-block w3-blue">Cancel Transaction</a>
