@@ -1,6 +1,4 @@
 class TradesController < ApplicationController	
-	before_action :authenticate_user!
-	
 	def index
 		@trade_items = if params[:term]
           Credit.where('location LIKE ?', "%#{params[:term]}%")
