@@ -3,7 +3,7 @@ class TradesController < ApplicationController
 		@trade_items = if params[:term]
           Credit.where('location LIKE ?', "%#{params[:term]}%")
         else
-          @products = Credit.all
+          @products = Credit.paginate(:page => params[:page], :per_page => 2)
         end
 	end
 
