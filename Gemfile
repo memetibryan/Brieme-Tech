@@ -17,6 +17,7 @@ gem 'carrierwave', '~> 0.10.0'
 gem 'twilio-ruby'
 gem 'stripe'
 gem 'acts_as_votable'
+gem 'will_paginate'
 
 group :development, :test do
     gem 'byebug', platform: :mri
