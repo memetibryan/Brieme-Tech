@@ -2,8 +2,6 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.3'
-gem 'turbolinks', '~> 5'
-gem 'jbuilder', '~> 2.5'
 gem 'dotenv-rails'
 gem 'pg', '~> 0.18'
 gem 'puma', '~> 3.7'
@@ -14,11 +12,11 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'devise', '~> 4.3.0'
-gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'twilio-ruby'
 gem 'stripe'
+gem 'acts_as_votable'
 
 group :development, :test do
     gem 'byebug', platform: :mri
