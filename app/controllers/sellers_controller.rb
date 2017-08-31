@@ -5,5 +5,6 @@ class SellersController < ApplicationController
 
 	def show
 		@seller = User.find(params[:id])
+		@logged_user = @seller
 	end
 end
