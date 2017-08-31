@@ -17,4 +17,5 @@ Rails.application.routes.draw do
   resources :about
   resources :trades
   resources :messages
+  resources :charges
 end
