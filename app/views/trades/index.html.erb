@@ -3,6 +3,12 @@
 <div class="container-fluid">
 
 <% if @trade_items.any? %>
+
+<%= form_tag(trades_path, method: :get) do %>
+  <%= text_field_tag :term %>
+  <%= submit_tag 'Search' %>
+<% end %>
+
     <h4>Credits in Stock:</h4>
 
     <hr>
@@ -10,6 +16,8 @@
     <ul>
       <% @trade_items.each do |credit| %>
         <ol>
+          <p>Seller:<%= credit.name %></p>
+          <p>Location:<%= credit.location %></p>
           <p>Credit:<%= credit.credit_amount %> <p>Selling at:<%= credit.price %></p>
           <p><%= link_to "Purchase", sellers_path, class: 'btn btn-primary' %><hr>
         </ol>
