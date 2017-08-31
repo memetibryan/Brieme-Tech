@@ -18,6 +18,7 @@ gem 'coffee-rails', '~> 4.2'
 gem 'jquery-rails'
 gem 'carrierwave', '~> 0.10.0'
 gem 'twilio-ruby'
+gem 'stripe'
 
 group :development, :test do
     gem 'byebug', platform: :mri
