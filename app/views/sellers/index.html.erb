@@ -7,7 +7,6 @@
     <% @sellers.each do |seller| %>
       <ol><%= link_to seller.email %>
       <p><%= link_to "View Profile", seller_path(seller), class: 'btn btn-primary' %>
-      <!-- Google Map -->
       <hr>
       </ol>
     <% end %>
