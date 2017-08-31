@@ -40,6 +40,6 @@ class CreditsController < ApplicationController
 
 private
 	def credit_params
-		params.require(:credit).permit(:name, :telephone, :price, :credit_amount)
+		params.require(:credit).permit(:name, :telephone, :price, :credit_amount, :location)
 	end
 end

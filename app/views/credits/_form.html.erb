@@ -4,12 +4,14 @@
 
 <%= form_for [@user, @credit] do |f| %>
     <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :telephone %>
-    <%= f.text_field :telephone %>
-    <%= f.label :selling_price %>
-    <%= f.text_field :price %>
-    <%= f.label :amount_of_credit %>
+    <%= f.text_field :name %><br>
+    <%= f.label :Location %>
+    <%= f.select :location, ['Kitengela','Karen','Lavington','Rongai','Kayole','Donholm','CBD','Kahawa West','Hurlinghum','Kawangware','Buruburu']%><br>
+    <%= f.label :Telephone %>
+    <%= f.text_field :telephone %><br>
+    <%= f.label :Selling_price %>
+    <%= f.text_field :price %><br>
+    <%= f.label :Amount_of_credit %>
     <%= f.text_field :credit_amount %>
 
     <p><%= f.submit %></p>

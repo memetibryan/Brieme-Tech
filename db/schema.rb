@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 20170830124009) do
   create_table "credits", force: :cascade do |t|
     t.text "name"
     t.bigint "telephone"
+    t.text "location"
     t.bigint "price"
     t.bigint "credit_amount"
     t.integer "user_id"
