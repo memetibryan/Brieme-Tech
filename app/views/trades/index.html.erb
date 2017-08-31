@@ -5,8 +5,8 @@
 <% if @trade_items.any? %>
 
 <%= form_tag(trades_path, method: :get) do %>
-  <%= text_field_tag :term %>
-  <%= submit_tag 'Search' %>
+  <%= text_field_tag :term, params[:term] %>
+  <%= submit_tag 'Search', name: nil %>
 <% end %>
 
     <h4>Credits in Stock:</h4>
