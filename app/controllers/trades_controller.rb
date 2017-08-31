@@ -5,7 +5,7 @@ class TradesController < ApplicationController
 		@trade_items = if params[:term]
           Credit.where('location LIKE ?', "%#{params[:term]}%")
         else
-          Credit.all
+          @products = Credit.all
         end
 	end
 
