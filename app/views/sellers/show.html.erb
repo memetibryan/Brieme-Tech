@@ -60,12 +60,8 @@
   <hr>
 <% end %>
 
-<br>
+<div class="container-fluid seller_profile">
 
-
-<div class="row">
-
-<div class="col-md-6">
 <% content_for(:title, "Credits") %>
 
   <% if @seller.credits.any? %>
@@ -89,18 +85,14 @@
 
 <% if current_user === @seller %>
 
-<%= link_to "Add Stock", new_seller_credit_path(@seller), class: 'btn btn-default' %><hr>
+<%= link_to "Add Stock", new_seller_credit_path(@seller), class: 'btn btn-info' %>
+<hr>
 <% else %>
 <% end %>
-</div>
 
-<div class="col-md-6">
   <p class="w3-xlarge">
   <a href="/messages/new" class="w3-button w3-round w3-red w3-opacity w3-hover-opacity-off" style="padding:8px 60px">Send Message</a>
   </p>
-</div>
-
-</div>
 
 <!-- RSVP modal -->
 <div id="id01" class="w3-modal">
